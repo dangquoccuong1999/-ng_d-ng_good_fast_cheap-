@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" id="0" value="GOOD" onclick="check(this.value)">GOOD<br>
+<input type="checkbox" id="1" value="CHEAP" onclick="check(this.value)">CHEAP<br>
+<input type="checkbox" id="2" value="FAST" onclick="check(this.value)">FAST
+
+<script>
+    /*    function check(value) {
+            let a = document.getElementById(0);
+            let b = document.getElementById(1);
+            let c = document.getElementById(2);
+            if(value == "GOOD"){
+                if (b.checked && c.checked){
+                    b.checked = false;
+                }
+            }
+            if(value == "CHEAP"){
+                if (c.checked && a.checked){
+                    c.checked = false;
+                }
+            }
+            if(value == "FAST"){
+                if (a.checked && b.checked){
+                    a.checked = false;
+                }
+            }
+        }
+     */
+    function check(value) {
+        let arr = [];
+        arr[0] = document.getElementById('0');
+        arr[1] = document.getElementById('1');
+        arr[2] = document.getElementById('2');
+        if (value == "GOOD") {
+            if (arr[1].checked && arr[2].checked) {
+                arr[1].checked = false;
+            }
+        }
+        if (value == "CHEAP") {
+            if (arr[0].checked && arr[2].checked) {
+                arr[2].checked = false;
+            }
+        }
+        if (value == "FAST") {
+            if (arr[0].checked && arr[1].checked) {
+                arr[0].checked = false;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
